@@ -1,13 +1,11 @@
 function findAverage(array) {
   let average = 0;
-  let sum = 0;
 
   if (array.length == 0) return average;
 
   array.forEach((number) => {
-    sum += number;
+    average += number;
   });
 
-  return sum / array.length
+  return average / array.length
 }
-console.log(findAverage([1,2]))

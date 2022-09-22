@@ -7,23 +7,21 @@
 
 function countPositivesSumNegatives(input) {
   if (input == null || input.length == 0) {
-    const array1 = [];
-    return array1;
-  } 
-  else {
-    let result1 = 0;
-    let result2 = 0;
+    return [];
+  } else {
+    let countOfPositives = 0
+    let sumOfNegativeNumbers = 0
 
-    input.forEach((numero) => {
-      if (numero < 0) {
-        result2 += numero;
+    input.forEach((number) => {
+      if (number < 0) {
+        sumOfNegativeNumbers += number;
       } else {
-        result1 += 1;
+        countOfPositives += 1;
       }
     });
-    
-    const array2 = [result1, result2];
 
-    return (array2);
+    return [countOfPositives, sumOfNegativeNumbers]
   }
 }
+
+console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
